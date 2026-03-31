@@ -25,11 +25,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.history,
-                size: 80,
-                color: Colors.grey[300],
-              ),
+              Icon(Icons.history, size: 80, color: Colors.grey[300]),
               const SizedBox(height: 20),
               Text(
                 'No Attendance Records',
@@ -39,9 +35,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
               Text(
                 'Your attendance history will appear here once you check in.',
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Colors.grey,
-                ),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyMedium?.copyWith(color: Colors.grey),
               ),
             ],
           ),

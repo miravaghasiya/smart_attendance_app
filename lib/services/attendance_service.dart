@@ -31,12 +31,16 @@ class AttendanceService {
 
   /// Get attendance for specific user
   List<Attendance> getUserAttendance(String userId) {
-    return _attendanceRecords.where((record) => record.userId == userId).toList();
+    return _attendanceRecords
+        .where((record) => record.userId == userId)
+        .toList();
   }
 
   /// Mark check-out time
   Future<void> markCheckOut(String attendanceId) async {
-    final index = _attendanceRecords.indexWhere((record) => record.id == attendanceId);
+    final index = _attendanceRecords.indexWhere(
+      (record) => record.id == attendanceId,
+    );
     if (index != -1) {
       final oldRecord = _attendanceRecords[index];
       final newRecord = Attendance(

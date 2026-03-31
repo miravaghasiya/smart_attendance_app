@@ -95,10 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Icon(Icons.login),
                       SizedBox(width: 8),
-                      Text(
-                        'Check In',
-                        style: TextStyle(fontSize: 16),
-                      ),
+                      Text('Check In', style: TextStyle(fontSize: 16)),
                     ],
                   ),
                 ),
@@ -119,10 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Icon(Icons.logout),
                       SizedBox(width: 8),
-                      Text(
-                        'Check Out',
-                        style: TextStyle(fontSize: 16),
-                      ),
+                      Text('Check Out', style: TextStyle(fontSize: 16)),
                     ],
                   ),
                 ),
@@ -143,10 +137,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Icon(Icons.history),
                       SizedBox(width: 8),
-                      Text(
-                        'View History',
-                        style: TextStyle(fontSize: 16),
-                      ),
+                      Text('View History', style: TextStyle(fontSize: 16)),
                     ],
                   ),
                 ),

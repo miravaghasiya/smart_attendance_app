@@ -34,7 +34,7 @@ class Attendance {
       id: json['id'] as String,
       userId: json['userId'] as String,
       checkInTime: DateTime.parse(json['checkInTime'] as String),
-      checkOutTime: json['checkOutTime'] != null 
+      checkOutTime: json['checkOutTime'] != null
           ? DateTime.parse(json['checkOutTime'] as String)
           : null,
       latitude: (json['latitude'] as num).toDouble(),

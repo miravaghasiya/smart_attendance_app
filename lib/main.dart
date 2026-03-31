@@ -62,9 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
 
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (context) => MainNavigationWidget(user: user),
-      ),
+      MaterialPageRoute(builder: (context) => MainNavigationWidget(user: user)),
     );
   }
 
@@ -78,11 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 60),
-              Icon(
-                Icons.qr_code_2,
-                size: 80,
-                color: Colors.blue[700],
-              ),
+              Icon(Icons.qr_code_2, size: 80, color: Colors.blue[700]),
               const SizedBox(height: 24),
               Text(
                 'Smart Attendance',
@@ -94,9 +88,9 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 8),
               Text(
                 'Login to continue',
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: Colors.grey,
-                ),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodyLarge?.copyWith(color: Colors.grey),
               ),
               const SizedBox(height: 48),
 
@@ -179,16 +173,16 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 24),
               Text(
                 'Demo Credentials',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: Colors.grey,
-                ),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodySmall?.copyWith(color: Colors.grey),
               ),
               const SizedBox(height: 8),
               Text(
                 'Use default values and click Login',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: Colors.grey[600],
-                ),
+                style: Theme.of(
+                  context,
+                ).textTheme.bodySmall?.copyWith(color: Colors.grey[600]),
               ),
             ],
           ),

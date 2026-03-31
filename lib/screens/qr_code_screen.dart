@@ -71,9 +71,8 @@ class _QRCodeScreenState extends State<QRCodeScreen> {
                         const SizedBox(height: 8),
                         Text(
                           qrCodeId,
-                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            fontFamily: 'monospace',
-                          ),
+                          style: Theme.of(context).textTheme.bodySmall
+                              ?.copyWith(fontFamily: 'monospace'),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 20),

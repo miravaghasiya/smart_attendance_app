@@ -8,9 +8,11 @@ class LocationService {
     final permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       final result = await Geolocator.requestPermission();
-      return result == LocationPermission.whileInUse || result == LocationPermission.always;
+      return result == LocationPermission.whileInUse ||
+          result == LocationPermission.always;
     }
-    return permission == LocationPermission.whileInUse || permission == LocationPermission.always;
+    return permission == LocationPermission.whileInUse ||
+        permission == LocationPermission.always;
   }
 
   Future<Position?> getCurrentLocation() async {
@@ -34,23 +36,14 @@ class LocationService {
     try {
       final position = await getCurrentLocation();
       if (position != null) {
-        return {
-          'latitude': position.latitude,
-          'longitude': position.longitude,
-        };
+        return {'latitude': position.latitude, 'longitude': position.longitude};
       } else {
         // Return default coordinates if location unavailable
-        return {
-          'latitude': defaultLatitude,
-          'longitude': defaultLongitude,
-        };
+        return {'latitude': defaultLatitude, 'longitude': defaultLongitude};
       }
     } catch (e) {
       print('Error getting coordinates: $e');
-      return {
-        'latitude': defaultLatitude,
-        'longitude': defaultLongitude,
-      };
+      return {'latitude': defaultLatitude, 'longitude': defaultLongitude};
     }
   }
 }
